@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Object Detection and Instance Segmentation: A Detailed Overview &middot; COEP DSAI
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Additional head bits without overriding original head -->
+<!-- Include MathJax support -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      CommonHTML: {linebreaks: { automatic: true}},
+      SVG: {linebreaks: { automatic: true}},
+      "HTML-CSS": {linebreaks: { automatic: true}}
+    });
+    MathJax.Hub.Register.StartupHook("CommonHTML multiline Ready",function () {
+      var PENALTY = MathJax.ElementJax.mml.mbase.prototype.CHTMLlinebreakPenalty;
+      PENALTY.toobig = 1000000;
+    });
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+        COEP DSAI
+      </a>
+    </div>
+    <p class="lead">Data Science and Artificial Intelligence Club at College of Engineering, Pune</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+    
+      <a class="page-link "
+          href="/about.html">About</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a>
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2020.
+  <a href="/LICENSE.md">MIT License.</a>
+</p>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="post-title">Object Detection and Instance Segmentation: A Detailed Overview</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">06 Apr 2020</span>
+  <span class="post-categories">
+    
+  </span>
+</div>
+
+
+  <div class="post-body">
+    <p>Author: <a href="https://in.linkedin.com/in/shaunak-halbe-565a0716b">Shaunak Halbe</a></p>
+
+<p>Object Detection is by far one of the most important fields of research in Computer Vision. Researchers have for a long time been interested in this field, but significant results were produced in the recent years owing to the rise of Convnets as feature extractors and Transfer Learning as method of passing on previous knowledge. Early object detectors were based on handcrafted features, and employed a sliding window based approach which was computationally inefficient and less accurate. Modern techniques include Region Proposal Methods, Single Shot Methods, Anchor Free Methods and so on.</p>
+
+<h4 id="a-object-detection">A) Object Detection</h4>
+<p>Object Detection refers to the method of identifying and correctly labeling all the objects present in the image frame.</p>
+
+<p>This broadly consists of two steps :</p>
+
+<ol>
+  <li>
+    <p><strong>Object Localization</strong> : Here, a bounding box or enclosing region is determined in the tightest possible manner in order to locate the exact position of the object in the image.</p>
+  </li>
+  <li>
+    <p><strong>Image Classification</strong>: The localized object is then fed to a classifier which labels the object.</p>
+  </li>
+</ol>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*pWoHu_uUDebBSSNmyMydLQ.png" />
+</center>
+
+<h4 id="b-semantic-segmentation">B) Semantic Segmentation</h4>
+
+<p>It refers to the process of linking each pixel in the given image to a particular class label. For example in the following image the pixels are labelled as car, tree, pedestrian etc. These segments are then used to find the interactions / relations between various objects.</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*5jK-um9WuXJhN8d0HjSNbg.jpeg" />
+</center>
+
+<h4 id="c-instance-segmentation">C) Instance Segmentation</h4>
+<p>Here, we associate a class label to each pixel similar to semantic segmentation, except that it treats multiple objects of the same class as individual objects / separate entities.</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*XGpOlTBTS3SBKdvsoQoZ8g.png" />
+</center>
+
+<h4 id="d-panoptic-segmentation">D) Panoptic Segmentation</h4>
+<p>It is a combination of Instance and Semantic Segmentation in a way that we associate with each pixel two values: Its class label and a instance number. It also recognizes the sky, the road, and other background elements collectively known as stuff.</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*u_d3V4ppQr2Cht0BvYpbbg.jpeg" />
+</center>
+
+<h2 id="important-concepts">Important Concepts</h2>
+
+<h3 id="bounding-boxes">Bounding Boxes</h3>
+<p>It is a tight rectangle used to enclose the object of interest. It is generally described by four values – <script type="math/tex">(bx, by, bh, bw)</script> Where <script type="math/tex">(bx, by)</script> are the co-ordinates of the center of the box and <script type="math/tex">(bh, bw)</script> are the height and width of the box respectively measured on a scale of <script type="math/tex">0</script> to <script type="math/tex">1</script>.</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*m4h0ng0rfMVYPSY93WxDpw.png" />
+</center>
+
+<h3 id="anchor-boxes">Anchor Boxes</h3>
+<p>These are a set of predefined bounding boxes of a certain height and width. These boxes are defined to capture the scale and aspect ratio of specific object classes you want to detect and are typically chosen based on object sizes in your training data-sets. During detection, the predefined anchor boxes are tiled across the image. The network predicts the probability and other attributes, such as background, intersection over union (IoU) and offsets for every tiled anchor box. The predictions are used to refine each individual anchor box. You can define several anchor boxes, each for a different object size.</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*qnVj5T81pGHSMBDdzv5nAA.png" />
+</center>
+
+<p>Thus the network refines these anchor boxes to finally output the tight bounding boxes. These are defined by the scale and aspect ratio.
+Here,</p>
+<ul>
+  <li>Aspect Ratio is the width / height of the box.</li>
+  <li>Size is the height and width of the box. eg (<script type="math/tex">256 \times 256</script>)</li>
+  <li>Scale is the multiplying factor of the required box w.r.t to base box</li>
+</ul>
+
+<h3 id="intersection-over-union-iou">Intersection over Union (IOU)</h3>
+
+<p>It is an evaluation metric used to check the accuracy of the predicted bounding box w.r.t the actual ground truth.</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*2LPQLE87SJBRCSXhpow9sA.png" />
+</center>
+
+<p>An IOU <script type="math/tex">> 0.5</script> is considered as a good prediction and is used for further evaluation.</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*JoyOqNm42i90sM2Y7VWBYA.png" />
+</center>
+
+<h3 id="non-max-suppression">Non-max suppression</h3>
+<p>If multiple boxes are present for a given object then, as the name suggests, this technique discards all boxes except the one having the maximum IOU.</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*LHMO63plv3iPp_0oQQcu5A.png" />
+</center>
+
+<h3 id="binary-mask">Binary Mask</h3>
+<p>It is a 2D array, that has a data point representing the same pixel width &amp; height of the image.
+Each pixel in our mask is labeled either a <code class="highlighter-rouge">1</code> or <code class="highlighter-rouge">0</code> (<code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>) for whether or not it belongs to the predicted instance.</p>
+
+<center>
+<figure>
+<img src="https://cdn-images-1.medium.com/max/800/1*4iU-yNAuESbgMKOytGs46g.jpeg" />
+<figcaption class="imageCaption">Binary Mask for a cat</figcaption>
+</figure>
+</center>
+
+<h3 id="metric--mean-average-precision">Metric - Mean Average Precision</h3>
+
+<p>Mean Average Precision or <script type="math/tex">mAP</script> is the metric used to quantify the accuracy of object detectors.</p>
+
+<p>Firstly,</p>
+
+<!--center>
+<img src="https://cdn-images-1.medium.com/max/800/1*Ifj2xS6bT16DWpHBwE21BQ.png">
+</center-->
+<p><script type="math/tex">\text{precision} = \frac{\text{true positives}}{\text{true positives} + \text{false positives}}</script></p>
+
+<p>Average precision for a image means precision averaged over all instances of objects present in the image.
+<script type="math/tex">mAP</script> is the average precision averaged over IOU of <script type="math/tex">0.5</script> to <script type="math/tex">0.95</script> with a step size of <script type="math/tex">0.05</script>.</p>
+
+<p>As a convention, <script type="math/tex">mAP</script> is expressed as a percent value.</p>
+
+<h3 id="region-proposals">Region Proposals</h3>
+
+<h4 id="a-rcnn">A) RCNN</h4>
+<p>The RCNN is a region proposal based object detection algorithm. Its stands for “<strong>R</strong>egion based <strong>C</strong>onvolutional <strong>N</strong>eural <strong>N</strong>etwork”.</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*vX4wUj_XMk17nYaC82lhBQ.jpeg" />
+</center>
+
+<p>Steps involved :</p>
+
+<p>The original RCNN paper [1] by Girshick et. al. Uses the Selective Search method for generating around 2000 region proposals.</p>
+
+<ol>
+<li>
+<b>Selective Search</b>: Selective Search uses a Hierarchical Grouping Algorithm to generate the region proposals.
+
+<ol>
+<li>
+<u>Generating Initial Regions</u>:
+
+It first runs a graph based image segmentation algorithm to obtain the initial regions as seen in the leftmost column of the image below.
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*CZj5NjOZKndKIS8iqn_nJw.jpeg" />
+</center>
+</li>
+<li>
+<u>Similarity Measure</u>:
+We find the similarity between regions based color, texture, size and shape compatibility:
+A Similarity Metric is obtained as follows:
+<span>
+$$s(r_i,r_j) = a_1 * S_{colour}(r_i,r_j) + a_2 * S_{texture}(r_i,r_j) + \\ a_3 * S_{size}(r_i,r_j) + a_4 * S_{fill}(r_i,r_j)$$
+</span>
+</li>
+<li>
+<u>Recursive Grouping</u>:
+Starting from these initial regions we recursively group these regions based on the similarity metric. We stop once the required number or proposals is attained.
+</li>
+</ol>
+</li>
+<li>
+<b>Warping</b>: Each of the region proposal is resized(scaled) to the required input size of the Convnet and enclosed in a tight box.
+</li>
+<li>
+<b>Feature Extraction</b>: Each of these warped region is fed one y one to a Convnet which outputs a 4096 length feature vector. 
+</li>
+<li> 
+<b>Classification</b>: The 4096 length feature vector is then fed to a SVM which classifies whether a object is present and assigns a label to it.
+</li>
+<li>
+<b>Bounding Box Regressor</b>: In addition to the class label the rcnn uses a linear regressor which outputs the bounding box co-ordinates for the object. 
+</li>
+<li>
+<b>IOU and non-max suppression</b>: In case of overlaps the best scored region is chosen and the rest are discarded. 
+</li>
+</ol>
+
+<h4 id="b-fast-rcnn">B) Fast RCNN</h4>
+
+<p>It is an improvised version of the RCNN as it eliminates some of the shortcomings of the rcnn.</p>
+
+<p><strong>Advantages</strong></p>
+
+<ol>
+  <li>Higher detection quality (<script type="math/tex">mAP</script>) than R-CNN, SPPnet</li>
+  <li>Time of Computation is reduced as it is a single stage process.</li>
+  <li>Does not require any extra disk storage to cache intermediate features.</li>
+  <li>Lesser parameters as compared to rcnn and SPPnet.</li>
+</ol>
+
+<p><strong>Process</strong></p>
+
+<ol>
+<li><b>Feature Map Generation</b>: Entire image is fed in along with object proposals to a Convnet. On passing through the Conv layers and Max Pooling layers a feature map is obtained.
+</li>
+<li><b>ROI Pooling</b>: The Region of Interest (ROI) in the feature map is given by \(r,c,h,w\) co-ordinates. This ROI is then passed through a ROI pooling layer to get a \(H \times W\) feature map.
+</li>
+<li><b>Fully Connected Layers</b>: This feature map is then extracted to a FC layer and then passed through FC layers to a softmax for class probability prediction and a regressor for the bounding box regression outputs.
+</li>
+</ol>
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*Zirwh-FDdgXX2fz7Qgy_mA.jpeg" />
+</center>
+
+<h4 id="c-faster-rcnn">C) Faster RCNN</h4>
+
+<p>Faster RCNN model was proposed by Ross Girshick et. al. [3] as a computationally efficient solution to object detection.</p>
+
+<p><b>Merits over Fast RCNN</b>:</p>
+
+<ol>
+  <li>It eliminates the computational bottleneck of determining region proposals from a image.</li>
+  <li>It uses a Fully Convolutional neural network for this purpose which makes it a single flow pipeline.</li>
+  <li>The RPN introduced in this paper[3] shares the features with the object detector as well.</li>
+</ol>
+
+<p><b>Architecture and Operation</b>:</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*NXWE7BHug0i-FQlHo5xa7w.png" />
+</center>
+
+<ol>
+  <li>Feature Map Generation: The image is passed through Conv layers which output a feature map.</li>
+  <li>Region Proposal Network: A sliding window is used in RPN for each location over the feature map.</li>
+  <li>Anchors: For each location, <script type="math/tex">k (k=9)</script> anchor boxes are used (3 scales of 128, 256 and 512, and 3 aspect ratios of 1:1, 1:2, 2:1) for generating region proposals.</li>
+  <li>Classification : A <code class="highlighter-rouge">clslayer</code> outputs <script type="math/tex">2k</script> scores whether there is object or not for <script type="math/tex">k</script> boxes.</li>
+  <li>Regression: A <code class="highlighter-rouge">reglayer</code> outputs <script type="math/tex">4k</script> for the coordinates(box center coordinates, width and height) of <script type="math/tex">k</script> boxes.</li>
+  <li>Detection network: Except for the RPN part the Detection network is the same as that of Fast rcnn.</li>
+  <li>Alternate Training: The RPN and Detection part are trained alternately so that they share the features learnt by each other.</li>
+</ol>
+
+<h4 id="d-mask-rcnn">D) Mask RCNN</h4>
+
+<p>Mask RCNN extends Faster Rcnn by adding a parallel mask output branch. It is a very important method used in instance segmentation.</p>
+
+<p><b>Motivation</b>:</p>
+
+<ol>
+  <li>Faster Rcnn, Yolo and other object detection algorithms output a bounding box and a class probability label associated with that box.</li>
+  <li>We as humans do not locate real life objects by drawing boxes around them, instead we look at the outline and the pose of the object in order to detect it.</li>
+  <li>In this regard, mask rcnn gets closer to human style of object perception.</li>
+  <li>The research on mask rcnn motivates us further leading to areas of panoptic segmentation, person keypoint detection, sports pose estimation etc.</li>
+  <li>All the self driving cars use the fundamental concept behind mask rcnn.</li>
+</ol>
+
+<p><b>Architecture and Implementation</b>:</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*Vlnu9esS7GSi9l8Yvo1XRw.jpeg" />
+</center>
+<ol>
+  <li>Mask R-CNN adopts the same two-stage procedure, with an identical first stage (which is RPN).</li>
+  <li>In the second stage, in parallel to predicting the class and box offset, Mask R-CNN also outputs a binary mask for each RoI.</li>
+</ol>
+
+<p><b>ROI Align Layer</b>:</p>
+
+<ol>
+  <li>The ROI pool layer in Faster Rcnn performs quantizations like flooring the floating point values and aggregation functions like Maxpool.</li>
+  <li>Such operations result into coarse features destroying the finer pixel to pixel arrangements which are necessary for instance segmentation.</li>
+  <li>To Counter this, Mask Rcnn uses the ROI Align layer which uses bi-linear interpolation instead of quantization which preserves the pixel alignments and improves mask accuracy.</li>
+</ol>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/800/1*HuzsE1q4zzHYzeb9gOrPJA.jpeg" />
+</center>
+
+<h2 id="current-research-and-future-scope">Current Research and Future Scope</h2>
+
+<p>Panoptic Segmentation: Recent CVPR papers make use of the mask rcnn model and build on top of it to achieve state of the art results on popular data-sets like City-Scapes.</p>
+
+<p>Mesh Rcnn: It is a very accurate system proposed by Georgia Gkioxari et. al. used for 3-D shape prediction which augments the mask rcnn models with a mesh prediction branch to generate voxel representations.</p>
+
+<p><strong>References</strong> :</p>
+
+<ol>
+  <li>R. Girshick, J. Donahue, T. Darrell, and J. Malik. Rich feature hierarchies for accurate object detection and semantic segmentation. In CVPR, 2014</li>
+  <li>R. Girshick. Fast R-CNN. In ICCV, 2015</li>
+  <li>Faster R-CNN: To-wards real-time object detection with region proposal net-works. In NIPS, 2015</li>
+  <li>Kaiming He, Georgia Gkioxari, Piotr Doll ́ar, and Ross Girshick. Mask R-CNN. In ICCV, 2017</li>
+  <li>Image References: Google</li>
+</ol>
+
+    
+
+
+
+<div class="post-tags">
+  
+</div>
+  </div>
+
+  
+  <!--section class="comments">
+    <h2>Comments</h2>
+    
+  <p>
+    You are seeing this because your Disqus shortname is not properly set. To
+    configure Disqus, you should edit your <code>_config.yml</code> to include
+    either a <code>disqus.shortname</code> variable.
+  </p>
+
+  <p>
+    If you do not wish to use Disqus, override the
+    <code>comments.html</code> partial for this theme.
+  </p>
+
+
+  </section-->
+
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+  </ul>
+</section>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>

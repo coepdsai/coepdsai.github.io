@@ -32,6 +32,21 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
   <!-- Additional head bits without overriding original head -->
+<!-- Include MathJax support -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      CommonHTML: {linebreaks: { automatic: true}},
+      SVG: {linebreaks: { automatic: true}},
+      "HTML-CSS": {linebreaks: { automatic: true}}
+    });
+    MathJax.Hub.Register.StartupHook("CommonHTML multiline Ready",function () {
+      var PENALTY = MathJax.ElementJax.mml.mbase.prototype.CHTMLlinebreakPenalty;
+      PENALTY.toobig = 1000000;
+    });
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 </head>
 
 
@@ -180,6 +195,36 @@
 
   
 
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/2020/04/06/object-detection-and-instance-segmentation-overview.html">
+        Object Detection and Instance Segmentation: A Detailed Overview
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">06 Apr 2020</span>
+  <span class="post-categories">
+    
+  </span>
+</div>
+
+
+    
+      <p>Author: <a href="https://in.linkedin.com/in/shaunak-halbe-565a0716b">Shaunak Halbe</a></p>
+
+    
+
+    
+      
+      
+      
+
+      
+        <a href="/2020/04/06/object-detection-and-instance-segmentation-overview.html">More &hellip;</a>
+      
+    
+  </article>
   
 
   
