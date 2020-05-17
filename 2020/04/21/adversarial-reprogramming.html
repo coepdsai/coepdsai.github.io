@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Adversarial Reprogramming &middot; COEP DSAI
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Additional head bits without overriding original head -->
+<!-- Include MathJax support -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      CommonHTML: {linebreaks: { automatic: true}},
+      SVG: {linebreaks: { automatic: true}},
+      "HTML-CSS": {linebreaks: { automatic: true}}
+    });
+    MathJax.Hub.Register.StartupHook("CommonHTML multiline Ready",function () {
+      var PENALTY = MathJax.ElementJax.mml.mbase.prototype.CHTMLlinebreakPenalty;
+      PENALTY.toobig = 1000000;
+    });
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+        COEP DSAI
+      </a>
+    </div>
+    <p class="lead">Data Science and Artificial Intelligence Club at College of Engineering, Pune</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+    
+      <a class="page-link "
+          href="/about.html">About</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a>
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2020.
+  <a href="/LICENSE.md">MIT License.</a>
+</p>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="post-title">Adversarial Reprogramming</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">21 Apr 2020</span>
+  <span class="post-categories">
+    
+  </span>
+</div>
+
+
+  <div class="post-body">
+    <p>Author: <a href="https://www.linkedin.com/in/gouri-n-7a364017a/">Gouri Nangliya</a></p>
+
+<p>Neural Networks find extensive applications in areas where traditional computers don’t fare too well. Today, neural networks are used for solving many business problems such as sales forecasting, customer research, data validation, and risk management. So, can you fool neural network? Sounds fun, right! This blog explains one of the techniques to fool neural network into doing something it was not intended to do. Basically, this blog is a summary of paper titled <strong>ADVERSARIAL REPROGRAMMING OF NEURAL NETWORKS.</strong></p>
+
+<h3 id="introduction">INTRODUCTION</h3>
+
+<p>Well, it seems deep neural networks are susceptible to adversarial attacks. An adversarial attack consists of subtly modifying an original image in such a way that the changes are almost undetectable to the human eye. The modified image is called an adversarial image, and when submitted to a classifier is misclassified, while the original one is correctly classified. Adversarial examples are such inputs to model that attacker has intentionally created so that model can make mistake. This is done by taking an image from dataset and using gradient descent to search for a nearby image on which model makes mistake. To make things more clear, look at example below : a model classifies image as “panda” with 57.7% confidence(image on left). But, when little <em>carefully crafted noise</em> is added, same model classifies new image as “gibbon” with 99.3% confidence(image on right). Now, you can clearly see, we can’t differentiate between image on left and image on right. But, this tricks the model!</p>
+
+<center>
+<img src="https://cdn-images-1.medium.com/max/1000/1*PmCgcjO3sr3CPPaCpy5Fgw.png" />
+</center>
+
+<p>One such concept is <strong>Adversarial Reprogramming of neural networks</strong> - in which model performs a task choosen by attacker which it was not intended to perform. Attacker just add slight change in all test inputs and reprogram the model to perform the new task. Attacks can be either a model is targeted to classify as a single output for all(or majority) of inputs or just degrade the performance of the network by misclassifying the inputs.</p>
+
+<p>Consider a model trained to perform some original task: for inputs $x$, it produces output $f(x)$. Consider an adversary(attacker) who wishes to perform an adversarial task: for  inputs $x’$ (not in domain of $x$), it wishes to produce an output $g(x’)$. So, this task can be done by using adversarial reprogramming functions, $h_f(.;\theta)$ and $h_g(.;\theta)$ where $h_f$ converts input from $x’$ into domain of $x$ and $h_g$ converts outputs i.e $f(h (.;\theta))$ to $g(x’)$. 
+Now, we compute $\theta$ to get the equation:
+$h_g(f (h_f (x’))$ = $g(x’)$. 
+Here, $\theta$ is known as <em>adversarial reprogram.</em></p>
+
+<p>In this blog, we will look at adversarial reprogramming for <strong>MNIST classification</strong>. So, the idea is, we embedded MNIST digits of size 28 × 28 × 3 inside the original CIFAR-10 image, assign the first 10 CIFAR-10 labels to the MNIST digits, and train an adversarial program. So, in this case, $x$ will be CIFAR-10 images and $x’$ will be MNIST images, $f(x)$ will be classifying CIFAR-10 images into one of the 10 labels and $g(x)$ as you can guess will be classifying MNIST images into 0-9 i.e. again 10 labels. Results show that it can be successfully reprogrammed to function as an MNIST classifier.</p>
+
+<h3 id="diving-into-maths-behind-this">Diving into Maths behind this!</h3>
+
+<p>Adversarial reprogram is something added to input. Consider ImageNet classifer for CIFAR10. Adversarial reprogram is defined as :
+$P = \tanh( W \odot M )$ where
+$W \in \mathbb{R}^{nxnx3}$ is the parameter to be learned 
+n is CIFAR10 image width 
+M is masking matrix in which 0 - adversarial data for new task, 1 - otherwise.
+$\tanh(\odot)$ is needed to make perbutations in (-1,1) i.e the same range of images in which model is trained to classify.</p>
+
+<p>The adversarial image(new input) becomes :
+$X_{adv} = h_f(x’;W) = X’ + P$ where
+$x’ \in \mathbb{R}^{nxnx3}$ is sample of MNIST dataset
+$X’ \in \mathbb{R}^{nxnx3}$ is equivalent CIFAR10 image which is obtained by placing $x’$ at the centre.</p>
+
+<p>Let, $P(y|X)$ be the probability that it predicted $y$ for the given input image $X$ where $y \in {1,…,1000}$. Now, we define $h_g(y_{adv})$ be the hard-coded mapping function that maps $y_{adv}$ to set of ImageNet labels. So, our goal is to maximize $P(h_g(y_{adv})|X_{adv})$. Theresore, optimization problem can be seen as :
+$W’ = \underset{W}{argmin}(-logP(h_g(y_{adv})|X_{adv}) + \lambda||W||^2_F)$ 
+where $\lambda$ is regularization coefficient to reduce overfitting. So, attacker only need to add this data and store the program, majority of computation will be done by targeted network.</p>
+
+<h3 id="how-to-build-mnist-classifier">How to build MNIST classifier?</h3>
+
+<p>Follow steps below:</p>
+
+<ol>
+  <li>Take a pretrained model on ImageNet like ResNet. If you are using CIFAR-10 dataset, then don’t use pretrained, weights don’t transfer well.</li>
+  <li>Add last fully connected layer for 10 output classes(0-9).</li>
+  <li>Train the model on CIFAR-10.</li>
+  <li>Add an <em>adversarial program</em> image to your MNIST image and pass that through the model. Map the outputs of model using the remapping you chose above to get your MNIST predictions.</li>
+  <li>Train only the adversarial program image on the remapped labels, while keeping the ResNet weights frozen.</li>
+</ol>
+
+<p>Now you got yourself an MNIST classifier: Take an MNIST image, add on your trained adversarial program, run it through ResNet, and remap its labels to get predictions for MNIST.</p>
+
+<center>
+<img src="https://venturebeat.com/wp-content/uploads/2018/07/Capture-boring.png?w=1200&amp;strip=all4" />
+</center>
+
+<h3 id="experiments">Experiments</h3>
+
+<p>The key point in bulding this MNIST is that we need to optimize in image space so that classification loss decreases. Actual size of CIFAR10 is 32x32 and that of MNIST image is 28x28. After implementing this MNIST classifier, I tried different sizes for MNIST images which is to be placed at the center of CIFAR10 images. Take a look at adversarial examples below for 14x14 MNIST images. As you can see, the MNIST image of size 14x14 placed at center of 32x32 image and rest of image space has some well crafted noise which helps us to build MNIST classifier.</p>
+
+<center>
+<img src="https://i.ibb.co/y4SFQD4/input.png" />
+</center>
+
+<p>Below are the accuracy plots for learning rates 0.01 and 0.1 respectively.</p>
+
+<center>
+<img src="https://i.ibb.co/4mKyBSK/adv-blog0-01.png" />
+</center>
+
+<center>
+<img src="https://i.ibb.co/fHNCVcy/adv-blog0-1.png" />
+</center>
+
+<p>So, we can see from the figure that as size of MNIST image is decreasing, accuracy is increasing. This is because the area in which model needs to optimize i.e. (32x32 - adversarial image area) is increasing and so is the accuracy. The drop of accuarcy at size 7x7 is due the fact that for odd number, my implementation doesn’t place adversarial image at center. So, this reveals another property that by placing the adversarial image at center, we get more accuracy than placing at any other location.</p>
+
+<p>So, this is how you can fool a neural network. Adversarial examples make machine learning models vulnerable to attacks, as in the following scenarios. A self-driving car crashes into another car because it ignores a stop sign. Someone had placed a picture over the sign, which looks like a stop sign with a little dirt for humans, but was designed to look like a parking prohibition sign for the sign recognition software of the car. A spam detector fails to classify an email as spam. The spam mail has been designed to resemble a normal email, but with the intention of cheating the recipient. A machine-learning powered scanner scans suitcases for weapons at the airport. A knife was developed to avoid detection by making the system think it is an umbrella.</p>
+
+<p><strong>References</strong> :</p>
+
+<ol>
+  <li><em>Adversarial Reprogramming of Neural Networks</em> - https://arxiv.org/pdf/1806.11146.pdf</li>
+  <li>https://medium.com/@ml.at.berkeley/tricking-neural-networks-create-your-own-adversarial-examples-a61eb7620fd8</li>
+  <li>https://towardsdatascience.com/adversarial-examples-in-deep-learning-be0b08a94953</li>
+  <li>https://rajatvd.github.io/Exploring-Adversarial-Reprogramming/</li>
+  <li>https://medium.com/onfido-tech/adversarial-attacks-and-defences-for-convolutional-neural-networks-66915ece52e7</li>
+</ol>
+
+    
+
+
+
+<div class="post-tags">
+  
+</div>
+  </div>
+
+  
+  <!--section class="comments">
+    <h2>Comments</h2>
+    
+  <p>
+    You are seeing this because your Disqus shortname is not properly set. To
+    configure Disqus, you should edit your <code>_config.yml</code> to include
+    either a <code>disqus.shortname</code> variable.
+  </p>
+
+  <p>
+    If you do not wish to use Disqus, override the
+    <code>comments.html</code> partial for this theme.
+  </p>
+
+
+  </section-->
+
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/2020/04/06/object-detection-and-instance-segmentation-overview.html">
+            Object Detection and Instance Segmentation: A Detailed Overview
+            <small>06 Apr 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>
