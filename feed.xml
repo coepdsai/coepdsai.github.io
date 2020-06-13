@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-06-13T19:52:33+05:30</updated><id>/feed.xml</id><title type="html">COEP DSAI</title><subtitle>Data Science and Artificial Intelligence Club at College of Engineering, Pune</subtitle><author><name>CoEP DSAI</name></author><entry><title type="html">Introduction to ARIMA Model</title><link href="/2020/05/15/arima-model.html" rel="alternate" type="text/html" title="Introduction to ARIMA Model" /><published>2020-05-15T00:00:00+05:30</published><updated>2020-05-15T00:00:00+05:30</updated><id>/2020/05/15/arima-model</id><content type="html" xml:base="/2020/05/15/arima-model.html">&lt;p&gt;Author: &lt;a href=&quot;https://www.linkedin.com/in/jinit-sanghvi-4329a016b/&quot;&gt;Jinit Sanghvi&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-06-13T20:18:00+05:30</updated><id>/feed.xml</id><title type="html">COEP DSAI</title><subtitle>Data Science and Artificial Intelligence Club at College of Engineering, Pune</subtitle><author><name>CoEP DSAI</name></author><entry><title type="html">Introduction to ARIMA Model</title><link href="/2020/05/15/arima-model.html" rel="alternate" type="text/html" title="Introduction to ARIMA Model" /><published>2020-05-15T00:00:00+05:30</published><updated>2020-05-15T00:00:00+05:30</updated><id>/2020/05/15/arima-model</id><content type="html" xml:base="/2020/05/15/arima-model.html">&lt;p&gt;Author: &lt;a href=&quot;https://www.linkedin.com/in/jinit-sanghvi-4329a016b/&quot;&gt;Jinit Sanghvi&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;introduction-to-arimamodel&quot;&gt;Introduction to ARIMA Model&lt;/h1&gt;
 
@@ -11,7 +11,9 @@
 &lt;p&gt;ARIMA or Autoregressive Integrated Moving Average is a purely-regressive model and this model is used for forecasting values of a time series. A time series is essentially a sequence of data points or observations taken at different instances. Time Series are very common to find given how time-dependent most of the worldly schemes and variables are. To better understand this, take a look at the Stock Market or weather reports gathered over a timeline and you’ll observe patterns which are highly time-dependent.
 &lt;br /&gt;
 In this post, we’ll first cover the theory and then move on to the code&lt;/p&gt;
+
 &lt;h3 id=&quot;theory&quot;&gt;Theory&lt;/h3&gt;
+
 &lt;p&gt;One of the best ways to be introduced to the model is to understand why we’re using it, especially when other effective regression models like linear regression or multivariate regression exists. For time-series forecasting, why do we prefer the ARIMA model? Most of the time-series data available online focuses on the dependent variable, and how the dependent variable changes with time. For models like linear regression, we need independent variables to map a function from dependent variables to dependent variables for prediction.
 However, this is not always possible because:-
 &lt;br /&gt;&lt;/p&gt;
@@ -26,23 +28,20 @@ However, this is not always possible because:-
 
 &lt;h2 id=&quot;ar-or-autoregressive-model&quot;&gt;AR or Autoregressive Model&lt;/h2&gt;
 
-&lt;p&gt;The intuition behind this model is that observations at different time-steps are related to the previous value of the variable. For example, on a hot sunny day, you predict that the next day will be hotter because you’ve noticed increasing temperatures. Similarly, the AR model finds the correlation between future time-steps and past time-steps to forecast future values.&lt;br /&gt;
+&lt;p&gt;The intuition behind this model is that observations at different time-steps are related to the previous value of the variable. For example, on a hot sunny day, you predict that the next day will be hotter because you’ve noticed increasing temperatures. Similarly, the AR model finds the correlation between future time-steps and past time-steps to forecast future values.&lt;/p&gt;
 
-
-&lt;center&gt;$$Y_t  = \alpha + \beta_1Y_{t-1} + \beta_2Y_{t-2} + \dots + \beta_pY_{t-p} + \epsilon_1$$&lt;/center&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Y_t  = \alpha + \beta_1Y_{t-1} + \beta_2Y_{t-2} + \dots + \beta_pY_{t-p} + \epsilon_1&lt;/script&gt;
 
 &lt;!--![AR Equation](https://latex.codecogs.com/gif.latex?Y_t%20%3D%20%5Calpha%20&amp;plus;%20%5Cbeta_1*Y_t_-_1%20&amp;plus;%20%5Cbeta_2*Y_t_-_2%20..%20&amp;plus;%20%5Cbeta_p*Y_t_-_p%20&amp;plus;%20%5Cepsilon_1)--&gt;
-&lt;i&gt;By the above equation, we can see how we can reduce this to a regression problem and statistically find the correlation between future values and earlier time-steps.&lt;/i&gt;
-&amp;lt;hr&amp;gt;
+&lt;p&gt;&lt;em&gt;By the above equation, we can see how we can reduce this to a regression problem and statistically find the correlation between future values and earlier time-steps.&lt;/em&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
 
-## Moving Average Model
+&lt;h2 id=&quot;moving-average-model&quot;&gt;Moving Average Model&lt;/h2&gt;
 
-&amp;lt;p&amp;gt;The intuition behind this model in nature is of reinforcement, i.e, a moving average model tries to learn from the previous errors it has committed and tries to tweak itself accordingly. To better understand this, take a look at the equation below:&lt;/p&gt;
+&lt;p&gt;The intuition behind this model in nature is of reinforcement, i.e, a moving average model tries to learn from the previous errors it has committed and tries to tweak itself accordingly. To better understand this, take a look at the equation below:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;Y_t = \alpha + \epsilon_t + \phi_1\epsilon_{t - 1} + \phi_2\epsilon_{t-2} + \dots + \phi_q\epsilon_{t-q}&lt;/script&gt;
-
-&lt;!--![MA_Equation](https://latex.codecogs.com/gif.latex?Y_t%20%3D%20%5Calpha%20&amp;plus;%20%5Cepsilon_t%20&amp;plus;%20%5Cphi_1%20%5Cepsilon_t-1%20&amp;plus;%20%5Cphi_2%20%5Cepsilon_t-2%20&amp;plus;%20...%20&amp;plus;%20%5Cphi_q%20%5Cepsilon_t-q)--&gt;
 
 &lt;p&gt;&lt;small&gt;But, what does &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt; signify? Simply put, it is the error or the difference between the actual value and the predicted value.&lt;/small&gt;
 &lt;br /&gt;&lt;/p&gt;
