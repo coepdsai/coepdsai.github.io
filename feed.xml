@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-18T14:04:15+05:30</updated><id>/feed.xml</id><title type="html">COEP DSAI</title><subtitle>Data Science and Artificial Intelligence Club at College of Engineering, Pune</subtitle><author><name>CoEP DSAI</name></author><entry><title type="html">Introduction to ARIMA Model</title><link href="/2020/05/15/arima-model.html" rel="alternate" type="text/html" title="Introduction to ARIMA Model" /><published>2020-05-15T00:00:00+05:30</published><updated>2020-05-15T00:00:00+05:30</updated><id>/2020/05/15/arima-model</id><content type="html" xml:base="/2020/05/15/arima-model.html">&lt;p&gt;Author: &lt;a href=&quot;https://www.linkedin.com/in/jinit-sanghvi-4329a016b/&quot;&gt;Jinit Sanghvi&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-18T14:12:21+05:30</updated><id>/feed.xml</id><title type="html">COEP DSAI</title><subtitle>Data Science and Artificial Intelligence Club at College of Engineering, Pune</subtitle><author><name>CoEP DSAI</name></author><entry><title type="html">Introduction to ARIMA Model</title><link href="/2020/05/15/arima-model.html" rel="alternate" type="text/html" title="Introduction to ARIMA Model" /><published>2020-05-15T00:00:00+05:30</published><updated>2020-05-15T00:00:00+05:30</updated><id>/2020/05/15/arima-model</id><content type="html" xml:base="/2020/05/15/arima-model.html">&lt;p&gt;Author: &lt;a href=&quot;https://www.linkedin.com/in/jinit-sanghvi-4329a016b/&quot;&gt;Jinit Sanghvi&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;introduction-to-arimamodel&quot;&gt;Introduction to ARIMA Model&lt;/h1&gt;
 
@@ -960,39 +960,40 @@ That's all for our Introductory series on Machine Learning with Python! [Kaggle]
 
 &lt;h2 id=&quot;an-introduction-into-python&quot;&gt;An introduction into Python&lt;/h2&gt;
 &lt;p&gt;This lecture covers the basics of Python. Topics covered are:&lt;/p&gt;
+
 &lt;ul&gt;
-    &lt;li&gt;Variables and Datatypes
-    &lt;li&gt;Operators
-    &lt;li&gt;Collection Data Types(Lists, Strings, Sets, Dictionaries, Tuples)
-    &lt;li&gt;The if statement
-    &lt;li&gt;For loops
-    &lt;li&gt;Nested Loops
-    &lt;li&gt;While loops
-    &lt;li&gt;continue and break
-&amp;lt;/ul&amp;gt;
+  &lt;li&gt;Variables and Datatypes&lt;/li&gt;
+  &lt;li&gt;Operators&lt;/li&gt;
+  &lt;li&gt;Collection Data Types(Lists, Strings, Sets, Dictionaries, Tuples)&lt;/li&gt;
+  &lt;li&gt;The if statement&lt;/li&gt;
+  &lt;li&gt;For loops&lt;/li&gt;
+  &lt;li&gt;Nested Loops&lt;/li&gt;
+  &lt;li&gt;While loops&lt;/li&gt;
+  &lt;li&gt;continue and break&lt;/li&gt;
+&lt;/ul&gt;
 
-Jupyter Notebook: [An Introduction into Python](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%201%20-%20An%20Introduction%20into%20Python.ipynb)
+&lt;p&gt;Jupyter Notebook: &lt;a href=&quot;https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%201%20-%20An%20Introduction%20into%20Python.ipynb&quot;&gt;An Introduction into Python&lt;/a&gt;&lt;/p&gt;
 
-Video: [Python : The Basics Part 1](https://www.youtube.com/watch?v=iJ8n30fzjH4&amp;amp;t=306s)
+&lt;p&gt;Video: &lt;a href=&quot;https://www.youtube.com/watch?v=iJ8n30fzjH4&amp;amp;t=306s&quot;&gt;Python : The Basics Part 1&lt;/a&gt;&lt;/p&gt;
 
-## Functions and Objects in Python
-This lecture covers functions and objects in Python.
-Topics covered are:
+&lt;h2 id=&quot;functions-and-objects-in-python&quot;&gt;Functions and Objects in Python&lt;/h2&gt;
+&lt;p&gt;This lecture covers functions and objects in Python.
+Topics covered are:&lt;/p&gt;
+
 &lt;ul&gt;
-    &lt;li&gt;Functions
-    &lt;li&gt;Classes and Objects
-    &lt;li&gt;Membership and Identity Operator
-    &lt;li&gt;range(), zip(), enumerate(), len()
-    &lt;li&gt;String Functions
-    &lt;li&gt;List Functions
-    &lt;li&gt;Dictionary Functions
-&amp;lt;/ul&amp;gt;
+  &lt;li&gt;Functions&lt;/li&gt;
+  &lt;li&gt;Classes and Objects&lt;/li&gt;
+  &lt;li&gt;Membership and Identity Operator&lt;/li&gt;
+  &lt;li&gt;range(), zip(), enumerate(), len()&lt;/li&gt;
+  &lt;li&gt;String Functions&lt;/li&gt;
+  &lt;li&gt;List Functions&lt;/li&gt;
+  &lt;li&gt;Dictionary Functions&lt;/li&gt;
+&lt;/ul&gt;
 
-Jupyter Notebook: [Functions and Objects in Python](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%202%20-%20Functions%20and%20Objects%20in%20Python.ipynb)
+&lt;p&gt;Jupyter Notebook: &lt;a href=&quot;https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%202%20-%20Functions%20and%20Objects%20in%20Python.ipynb&quot;&gt;Functions and Objects in Python&lt;/a&gt;&lt;/p&gt;
 
-Video: [Python : The Basics Part 2 (Functions and Objects)](https://www.youtube.com/watch?v=W3RMyphMPR4)
+&lt;p&gt;Video: &lt;a href=&quot;https://www.youtube.com/watch?v=W3RMyphMPR4&quot;&gt;Python : The Basics Part 2 (Functions and Objects)&lt;/a&gt;&lt;/p&gt;
 
-That's all for learning about the basics of Python! Do remember to practice the skills you learnt here, so as to gain mastery over them. 
+&lt;p&gt;That’s all for learning about the basics of Python! Do remember to practice the skills you learnt here, so as to gain mastery over them. 
 This blog is Part 1 of a 2 part series. Part 2 covers a theotetical intorduction to Machine Learning and Artificial Intelligence, learning the basics of important ML libraries in Python (NumPy, Pandas and ScikitLearn), a code walkthrough of an ML problem using ScikitLearn, and an implementation of Linear Regression from scratch.
-In the next post, we will look at learning the basics of Machine Learning. [Find it here](https://coepdsai.github.io/2020/03/03/ml-with-python.html)
-&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;</content><author><name>CoEP DSAI</name></author><summary type="html">Author: Aditya Khandelwal</summary></entry></feed>
+In the next post, we will look at learning the basics of Machine Learning. &lt;a href=&quot;https://coepdsai.github.io/2020/03/03/ml-with-python.html&quot;&gt;Find it here&lt;/a&gt;&lt;/p&gt;</content><author><name>CoEP DSAI</name></author><summary type="html">Author: Aditya Khandelwal</summary></entry></feed>
