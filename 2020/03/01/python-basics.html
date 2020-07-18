@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Get Started with Python &middot; COEP DSAI
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Additional head bits without overriding original head -->
+<!-- Include MathJax support -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      CommonHTML: {linebreaks: { automatic: true}},
+      SVG: {linebreaks: { automatic: true}},
+      "HTML-CSS": {linebreaks: { automatic: true}}
+    });
+    MathJax.Hub.Register.StartupHook("CommonHTML multiline Ready",function () {
+      var PENALTY = MathJax.ElementJax.mml.mbase.prototype.CHTMLlinebreakPenalty;
+      PENALTY.toobig = 1000000;
+    });
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+        COEP DSAI
+      </a>
+    </div>
+    <p class="lead">Data Science and Artificial Intelligence Club at College of Engineering, Pune</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+    
+      <a class="page-link "
+          href="/about.html">About</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a>
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2020.
+  <a href="/LICENSE.md">MIT License.</a>
+</p>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="post-title">Get Started with Python</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">01 Mar 2020</span>
+  <span class="post-categories">
+    
+  </span>
+</div>
+
+
+  <div class="post-body">
+    <p>Author: <a href="https://www.linkedin.com/in/aditya-khandelwal/">Aditya Khandelwal</a></p>
+
+<p><em>This blog is a part of “Introductory Lecture Series” conducted by Aditya in 2019</em></p>
+
+<h1 id="get-started-with-python">Get Started with Python</h1>
+
+<center>
+<img src="https://www.technotification.com/wp-content/uploads/2017/05/Python-programming-compressed.jpg" />
+</center>
+<p style="text-align:center;">Taken from <a href="https://www.technotification.com/wp-content/uploads/2017/05/Python-programming-compressed.jpg">technotification.com</a></p>
+
+<p>Python is high-level programming language, making coding progranms very easy and intuitive. The availability of a plethora of well-sipported libraries make it one of the most popular programming languages today.</p>
+
+<p>For most Machine learning applications, Python is an essential skill that needs to be mastered before learning to develop any ML applications. This blog contains links to 2 separate formats of explanation: a Juppyter Notebook and a video containing a walkthrough of the Jupyter notebook. Feel free to look at whichever format suits you best.</p>
+
+<h2 id="an-introduction-into-python">An introduction into Python</h2>
+<p>This lecture covers the basics of Python. Topics covered are:</p>
+<ul>
+    <li>Variables and Datatypes
+    <li>Operators
+    <li>Collection Data Types(Lists, Strings, Sets, Dictionaries, Tuples)
+    <li>The if statement
+    <li>For loops
+    <li>Nested Loops
+    <li>While loops
+    <li>continue and break
+&lt;/ul&gt;
+
+Jupyter Notebook: [An Introduction into Python](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%201%20-%20An%20Introduction%20into%20Python.ipynb)
+
+Video: [Python : The Basics Part 1](https://www.youtube.com/watch?v=iJ8n30fzjH4&amp;t=306s)
+
+## Functions and Objects in Python
+This lecture covers functions and objects in Python.
+Topics covered are:
+<ul>
+    <li>Functions
+    <li>Classes and Objects
+    <li>Membership and Identity Operator
+    <li>range(), zip(), enumerate(), len()
+    <li>String Functions
+    <li>List Functions
+    <li>Dictionary Functions
+&lt;/ul&gt;
+
+Jupyter Notebook: [Functions and Objects in Python](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%202%20-%20Functions%20and%20Objects%20in%20Python.ipynb)
+
+Video: [Python : The Basics Part 2 (Functions and Objects)](https://www.youtube.com/watch?v=W3RMyphMPR4)
+
+That's all for learning about the basics of Python! Do remember to practice the skills you learnt here, so as to gain mastery over them. 
+This blog is Part 1 of a 2 part series. Part 2 covers a theotetical intorduction to Machine Learning and Artificial Intelligence, learning the basics of important ML libraries in Python (NumPy, Pandas and ScikitLearn), a code walkthrough of an ML problem using ScikitLearn, and an implementation of Linear Regression from scratch.
+In the next post, we will look at learning the basics of Machine Learning. [Find it here](https://coepdsai.github.io/2020/03/03/ml-with-python.html)
+</li></li></li></li></li></li></li></ul></li></li></li></li></li></li></li></li></ul>
+
+    
+
+
+
+<div class="post-tags">
+  
+</div>
+  </div>
+
+  
+  <!--section class="comments">
+    <h2>Comments</h2>
+    
+  <p>
+    You are seeing this because your Disqus shortname is not properly set. To
+    configure Disqus, you should edit your <code>_config.yml</code> to include
+    either a <code>disqus.shortname</code> variable.
+  </p>
+
+  <p>
+    If you do not wish to use Disqus, override the
+    <code>comments.html</code> partial for this theme.
+  </p>
+
+
+  </section-->
+
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/15/arima-model.html">
+            Introduction to ARIMA Model
+            <small>15 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/04/21/adversarial-reprogramming.html">
+            Adversarial Reprogramming
+            <small>21 Apr 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/04/06/object-detection-and-instance-segmentation-overview.html">
+            Object Detection and Instance Segmentation: A Detailed Overview
+            <small>06 Apr 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>

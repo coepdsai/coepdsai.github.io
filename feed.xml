@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-06-13T20:18:00+05:30</updated><id>/feed.xml</id><title type="html">COEP DSAI</title><subtitle>Data Science and Artificial Intelligence Club at College of Engineering, Pune</subtitle><author><name>CoEP DSAI</name></author><entry><title type="html">Introduction to ARIMA Model</title><link href="/2020/05/15/arima-model.html" rel="alternate" type="text/html" title="Introduction to ARIMA Model" /><published>2020-05-15T00:00:00+05:30</published><updated>2020-05-15T00:00:00+05:30</updated><id>/2020/05/15/arima-model</id><content type="html" xml:base="/2020/05/15/arima-model.html">&lt;p&gt;Author: &lt;a href=&quot;https://www.linkedin.com/in/jinit-sanghvi-4329a016b/&quot;&gt;Jinit Sanghvi&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-18T14:04:15+05:30</updated><id>/feed.xml</id><title type="html">COEP DSAI</title><subtitle>Data Science and Artificial Intelligence Club at College of Engineering, Pune</subtitle><author><name>CoEP DSAI</name></author><entry><title type="html">Introduction to ARIMA Model</title><link href="/2020/05/15/arima-model.html" rel="alternate" type="text/html" title="Introduction to ARIMA Model" /><published>2020-05-15T00:00:00+05:30</published><updated>2020-05-15T00:00:00+05:30</updated><id>/2020/05/15/arima-model</id><content type="html" xml:base="/2020/05/15/arima-model.html">&lt;p&gt;Author: &lt;a href=&quot;https://www.linkedin.com/in/jinit-sanghvi-4329a016b/&quot;&gt;Jinit Sanghvi&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;introduction-to-arimamodel&quot;&gt;Introduction to ARIMA Model&lt;/h1&gt;
 
@@ -869,4 +869,130 @@ Starting from these initial regions we recursively group these regions based on 
   &lt;li&gt;Faster R-CNN: To-wards real-time object detection with region proposal net-works. In NIPS, 2015&lt;/li&gt;
   &lt;li&gt;Kaiming He, Georgia Gkioxari, Piotr Doll ́ar, and Ross Girshick. Mask R-CNN. In ICCV, 2017&lt;/li&gt;
   &lt;li&gt;Image References: Google&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>CoEP DSAI</name></author><summary type="html">Author: Shaunak Halbe</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>CoEP DSAI</name></author><summary type="html">Author: Shaunak Halbe</summary></entry><entry><title type="html">An Introduction to Machine Learning with Python</title><link href="/2020/03/03/ml-with-python.html" rel="alternate" type="text/html" title="An Introduction to Machine Learning with Python" /><published>2020-03-03T00:00:00+05:30</published><updated>2020-03-03T00:00:00+05:30</updated><id>/2020/03/03/ml-with-python</id><content type="html" xml:base="/2020/03/03/ml-with-python.html">&lt;p&gt;Author: &lt;a href=&quot;https://www.linkedin.com/in/aditya-khandelwal/&quot;&gt;Aditya Khandelwal&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This blog is a part of “Introductory Lecture Series” conducted by Aditya in 2019&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;an-introduction-to-machine-learning-with-python&quot;&gt;An Introduction to Machine Learning with Python&lt;/h1&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;https://blog.alore.io/wp-content/uploads/2018/03/ai-and-ml.png&quot; /&gt;
+&lt;/center&gt;
+&lt;p style=&quot;text-align:center;&quot;&gt;Taken from &lt;a href=&quot;https://blog.alore.io/wp-content/uploads/2018/03/ai-and-ml.png&quot;&gt;blog.alore.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Artificial Intelligence refers to making computers behave intelligently. Computers, who are not capable of intelligent behavior on their own, are made to simulate intelligent behavior using some algorithm.&lt;/p&gt;
+
+&lt;p&gt;Behind all AI robots/computers, there is an algorithm that makes it look that way. AI is a broad field that encompasses all such algorithms, including hard-coded rules to simulate intelligence.&lt;/p&gt;
+
+&lt;p&gt;Machine Learning is a subfield of AI. Here, we try to make the machine learn by itself. Naturally, there is an algorithm involved, but here, instead of telling the computer what to look for, you tell it how to learn. There are no hard-coded rules. We do not use the computer just to speed up something we do, or to memorize a bunch of rules that we cannot. Instead, the machine simulates “learning” on the given “data”.&lt;/p&gt;
+
+&lt;p&gt;Deep Learning is a subfield of Machine Learning. It is to do with Neural Networks, algorithms that are inspired by the human brain.&lt;/p&gt;
+
+&lt;h2 id=&quot;artificial-intelligence-and-machine-learning-an-overview&quot;&gt;Artificial Intelligence and Machine Learning: An Overview&lt;/h2&gt;
+
+&lt;p&gt;This lecture gives an overview of AI and ML. It covers:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Artificial Intelligence: Goals and Approaches
+    &lt;li&gt;Machine Learning:
+    &lt;ul&gt;
+        &lt;li&gt;Supervised Learning
+        &lt;li&gt;Unsupervised Learning
+        &lt;li&gt;Reinforcement Learning
+    &amp;lt;/ul&amp;gt;
+    &lt;li&gt;Deep Learning
+&amp;lt;/ul&amp;gt;
+
+Jupyter Notebook: [Machine Learning - 1](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%204%20-%20Machine%20Learning%201.ipynb)
+
+Video: [Artificial Intelligence and Machine Learning Overview](https://www.youtube.com/watch?v=ydzBMBY9rEE)
+
+## Important ML Libraries in Python (NumPy, Pandas and ScikitLearn)
+
+This lecture covers the basics of NumPy, Pandas and SciKit Learn, 3 of the most popular libraries for Machine Learning in Python.
+Topics covered include:
+&lt;ul&gt;
+    &lt;li&gt;Numpy:
+    &lt;ul&gt;
+        &lt;li&gt;Datatypes
+        &lt;li&gt;Functions
+        &lt;li&gt;Operations
+        &lt;li&gt;Indexing
+    &amp;lt;/ul&amp;gt;
+    &lt;li&gt;Pandas:
+    &lt;ul&gt;
+        &lt;li&gt;Series
+        &lt;li&gt;DataFrame
+        &lt;li&gt;Indexing
+        &lt;li&gt;Functions
+    &amp;lt;/ul&amp;gt;
+    &lt;li&gt;Walkthrough of the Iris Dataset using ScikitLearn.
+&amp;lt;/ul&amp;gt;
+
+Jupyter Notebook: [Important Libraries in Python (for Machine Learning)](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%203%20-%20Important%20Libraries%20in%20Python.ipynb)
+
+Video: [NumPy, Pandas and ScikitLearn for ML](https://www.youtube.com/watch?v=IsXWTsKabY8)
+
+## Linear Regression From Scratch
+
+Linear Regression is among the simplest Machine Learaning algorithms, which can be used to fit a line through a set of points giving the least error. 
+
+In this lecture, we code logistic regression from scratch. We delve into the basic concepts of backpropagation and use NumPy to first code a stochastic version, and then code the vectorized version of Logistic Regression.
+
+Jupyter Notebook: [Linear Regression](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%205%20-%20Linear%20Regression.ipynb)
+
+Video: [Linear Regression From Scratch](https://www.youtube.com/watch?v=TUxcArHm1EU)
+
+That's all for our Introductory series on Machine Learning with Python! [Kaggle](https://www.kaggle.com/) is a great platform to experiment with datasets and gain hands on practice with ML techniques, so I encourage you to create a Kaggle account and start applying ML methods to real datasets!
+&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;</content><author><name>CoEP DSAI</name></author><summary type="html">Author: Aditya Khandelwal</summary></entry><entry><title type="html">Get Started with Python</title><link href="/2020/03/01/python-basics.html" rel="alternate" type="text/html" title="Get Started with Python" /><published>2020-03-01T00:00:00+05:30</published><updated>2020-03-01T00:00:00+05:30</updated><id>/2020/03/01/python-basics</id><content type="html" xml:base="/2020/03/01/python-basics.html">&lt;p&gt;Author: &lt;a href=&quot;https://www.linkedin.com/in/aditya-khandelwal/&quot;&gt;Aditya Khandelwal&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This blog is a part of “Introductory Lecture Series” conducted by Aditya in 2019&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;get-started-with-python&quot;&gt;Get Started with Python&lt;/h1&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;https://www.technotification.com/wp-content/uploads/2017/05/Python-programming-compressed.jpg&quot; /&gt;
+&lt;/center&gt;
+&lt;p style=&quot;text-align:center;&quot;&gt;Taken from &lt;a href=&quot;https://www.technotification.com/wp-content/uploads/2017/05/Python-programming-compressed.jpg&quot;&gt;technotification.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Python is high-level programming language, making coding progranms very easy and intuitive. The availability of a plethora of well-sipported libraries make it one of the most popular programming languages today.&lt;/p&gt;
+
+&lt;p&gt;For most Machine learning applications, Python is an essential skill that needs to be mastered before learning to develop any ML applications. This blog contains links to 2 separate formats of explanation: a Juppyter Notebook and a video containing a walkthrough of the Jupyter notebook. Feel free to look at whichever format suits you best.&lt;/p&gt;
+
+&lt;h2 id=&quot;an-introduction-into-python&quot;&gt;An introduction into Python&lt;/h2&gt;
+&lt;p&gt;This lecture covers the basics of Python. Topics covered are:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Variables and Datatypes
+    &lt;li&gt;Operators
+    &lt;li&gt;Collection Data Types(Lists, Strings, Sets, Dictionaries, Tuples)
+    &lt;li&gt;The if statement
+    &lt;li&gt;For loops
+    &lt;li&gt;Nested Loops
+    &lt;li&gt;While loops
+    &lt;li&gt;continue and break
+&amp;lt;/ul&amp;gt;
+
+Jupyter Notebook: [An Introduction into Python](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%201%20-%20An%20Introduction%20into%20Python.ipynb)
+
+Video: [Python : The Basics Part 1](https://www.youtube.com/watch?v=iJ8n30fzjH4&amp;amp;t=306s)
+
+## Functions and Objects in Python
+This lecture covers functions and objects in Python.
+Topics covered are:
+&lt;ul&gt;
+    &lt;li&gt;Functions
+    &lt;li&gt;Classes and Objects
+    &lt;li&gt;Membership and Identity Operator
+    &lt;li&gt;range(), zip(), enumerate(), len()
+    &lt;li&gt;String Functions
+    &lt;li&gt;List Functions
+    &lt;li&gt;Dictionary Functions
+&amp;lt;/ul&amp;gt;
+
+Jupyter Notebook: [Functions and Objects in Python](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%202%20-%20Functions%20and%20Objects%20in%20Python.ipynb)
+
+Video: [Python : The Basics Part 2 (Functions and Objects)](https://www.youtube.com/watch?v=W3RMyphMPR4)
+
+That's all for learning about the basics of Python! Do remember to practice the skills you learnt here, so as to gain mastery over them. 
+This blog is Part 1 of a 2 part series. Part 2 covers a theotetical intorduction to Machine Learning and Artificial Intelligence, learning the basics of important ML libraries in Python (NumPy, Pandas and ScikitLearn), a code walkthrough of an ML problem using ScikitLearn, and an implementation of Linear Regression from scratch.
+In the next post, we will look at learning the basics of Machine Learning. [Find it here](https://coepdsai.github.io/2020/03/03/ml-with-python.html)
+&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;</content><author><name>CoEP DSAI</name></author><summary type="html">Author: Aditya Khandelwal</summary></entry></feed>

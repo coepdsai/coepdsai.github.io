@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      An Introduction to Machine Learning with Python &middot; COEP DSAI
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Additional head bits without overriding original head -->
+<!-- Include MathJax support -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      CommonHTML: {linebreaks: { automatic: true}},
+      SVG: {linebreaks: { automatic: true}},
+      "HTML-CSS": {linebreaks: { automatic: true}}
+    });
+    MathJax.Hub.Register.StartupHook("CommonHTML multiline Ready",function () {
+      var PENALTY = MathJax.ElementJax.mml.mbase.prototype.CHTMLlinebreakPenalty;
+      PENALTY.toobig = 1000000;
+    });
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+        COEP DSAI
+      </a>
+    </div>
+    <p class="lead">Data Science and Artificial Intelligence Club at College of Engineering, Pune</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+    
+      <a class="page-link "
+          href="/about.html">About</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a>
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2020.
+  <a href="/LICENSE.md">MIT License.</a>
+</p>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="post-title">An Introduction to Machine Learning with Python</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">03 Mar 2020</span>
+  <span class="post-categories">
+    
+  </span>
+</div>
+
+
+  <div class="post-body">
+    <p>Author: <a href="https://www.linkedin.com/in/aditya-khandelwal/">Aditya Khandelwal</a></p>
+
+<p><em>This blog is a part of “Introductory Lecture Series” conducted by Aditya in 2019</em></p>
+
+<h1 id="an-introduction-to-machine-learning-with-python">An Introduction to Machine Learning with Python</h1>
+
+<center>
+<img src="https://blog.alore.io/wp-content/uploads/2018/03/ai-and-ml.png" />
+</center>
+<p style="text-align:center;">Taken from <a href="https://blog.alore.io/wp-content/uploads/2018/03/ai-and-ml.png">blog.alore.io</a></p>
+
+<p>Artificial Intelligence refers to making computers behave intelligently. Computers, who are not capable of intelligent behavior on their own, are made to simulate intelligent behavior using some algorithm.</p>
+
+<p>Behind all AI robots/computers, there is an algorithm that makes it look that way. AI is a broad field that encompasses all such algorithms, including hard-coded rules to simulate intelligence.</p>
+
+<p>Machine Learning is a subfield of AI. Here, we try to make the machine learn by itself. Naturally, there is an algorithm involved, but here, instead of telling the computer what to look for, you tell it how to learn. There are no hard-coded rules. We do not use the computer just to speed up something we do, or to memorize a bunch of rules that we cannot. Instead, the machine simulates “learning” on the given “data”.</p>
+
+<p>Deep Learning is a subfield of Machine Learning. It is to do with Neural Networks, algorithms that are inspired by the human brain.</p>
+
+<h2 id="artificial-intelligence-and-machine-learning-an-overview">Artificial Intelligence and Machine Learning: An Overview</h2>
+
+<p>This lecture gives an overview of AI and ML. It covers:</p>
+<ul>
+    <li>Artificial Intelligence: Goals and Approaches
+    <li>Machine Learning:
+    <ul>
+        <li>Supervised Learning
+        <li>Unsupervised Learning
+        <li>Reinforcement Learning
+    &lt;/ul&gt;
+    <li>Deep Learning
+&lt;/ul&gt;
+
+Jupyter Notebook: [Machine Learning - 1](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%204%20-%20Machine%20Learning%201.ipynb)
+
+Video: [Artificial Intelligence and Machine Learning Overview](https://www.youtube.com/watch?v=ydzBMBY9rEE)
+
+## Important ML Libraries in Python (NumPy, Pandas and ScikitLearn)
+
+This lecture covers the basics of NumPy, Pandas and SciKit Learn, 3 of the most popular libraries for Machine Learning in Python.
+Topics covered include:
+<ul>
+    <li>Numpy:
+    <ul>
+        <li>Datatypes
+        <li>Functions
+        <li>Operations
+        <li>Indexing
+    &lt;/ul&gt;
+    <li>Pandas:
+    <ul>
+        <li>Series
+        <li>DataFrame
+        <li>Indexing
+        <li>Functions
+    &lt;/ul&gt;
+    <li>Walkthrough of the Iris Dataset using ScikitLearn.
+&lt;/ul&gt;
+
+Jupyter Notebook: [Important Libraries in Python (for Machine Learning)](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%203%20-%20Important%20Libraries%20in%20Python.ipynb)
+
+Video: [NumPy, Pandas and ScikitLearn for ML](https://www.youtube.com/watch?v=IsXWTsKabY8)
+
+## Linear Regression From Scratch
+
+Linear Regression is among the simplest Machine Learaning algorithms, which can be used to fit a line through a set of points giving the least error. 
+
+In this lecture, we code logistic regression from scratch. We delve into the basic concepts of backpropagation and use NumPy to first code a stochastic version, and then code the vectorized version of Logistic Regression.
+
+Jupyter Notebook: [Linear Regression](https://nbviewer.jupyter.org/github/adityak6798/adityak6798.github.io/blob/master/Lecture%205%20-%20Linear%20Regression.ipynb)
+
+Video: [Linear Regression From Scratch](https://www.youtube.com/watch?v=TUxcArHm1EU)
+
+That's all for our Introductory series on Machine Learning with Python! [Kaggle](https://www.kaggle.com/) is a great platform to experiment with datasets and gain hands on practice with ML techniques, so I encourage you to create a Kaggle account and start applying ML methods to real datasets!
+</li></li></li></li></li></ul></li></li></li></li></li></ul></li></ul></li></li></li></li></ul></li></li></ul>
+
+    
+
+
+
+<div class="post-tags">
+  
+</div>
+  </div>
+
+  
+  <!--section class="comments">
+    <h2>Comments</h2>
+    
+  <p>
+    You are seeing this because your Disqus shortname is not properly set. To
+    configure Disqus, you should edit your <code>_config.yml</code> to include
+    either a <code>disqus.shortname</code> variable.
+  </p>
+
+  <p>
+    If you do not wish to use Disqus, override the
+    <code>comments.html</code> partial for this theme.
+  </p>
+
+
+  </section-->
+
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/15/arima-model.html">
+            Introduction to ARIMA Model
+            <small>15 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/04/21/adversarial-reprogramming.html">
+            Adversarial Reprogramming
+            <small>21 Apr 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/04/06/object-detection-and-instance-segmentation-overview.html">
+            Object Detection and Instance Segmentation: A Detailed Overview
+            <small>06 Apr 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>
